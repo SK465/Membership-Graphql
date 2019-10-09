@@ -1,0 +1,16 @@
+ type MemberAddress{
+ 
+    memberAddressId: ID!
+    adressLine1: String
+ 	adressLine2: String
+    adressLine3: String
+    city: String
+    state: String
+    postalCode: String
+    countryCode: String
+    isActive: String
+    createdBy: String
+    updatedBy: String
+    visibilityScopeId: Int 
+    
+ }

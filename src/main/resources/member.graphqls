@@ -1,0 +1,50 @@
+scalar Date
+
+type Member {
+	memberId : ID!
+	title: String
+	fname: String
+	mname: String
+	lname: String
+	suffix: String
+	dob: Date
+	gender: String
+	memberNumber: String
+    emailId: String
+    phoneNnumber: String
+    nationalId: String
+    extMemberRef: String
+    preferences: String
+    startDate: Date
+    endDate: Date   
+    isActive: Boolean
+    createdBy: String
+    createdDate: Date
+    updatedBy: String
+    updatedDate: Date
+    aofKey: String    
+    mailingName1: String
+    mailingName2: String
+    salutation: String
+    correlationId: String
+    languageId: Int
+    memberGuid: String
+    memberAddress: MemberAddress
+    serviceChannelAccount: [ServiceChannelAccount]
+    visibilityScope : VisibilityScope
+}
+
+
+type Query {
+    getMember(memberId: ID!) :  Member
+    getAllMembers(skip: Int, first: Int): [Member!]!
+    getFilteredMembers(filter: MemberFilter!,skip: Int, first: Int): [Member!]!
+}
+
+
+input MemberFilter {
+    fname: String
+    isActive: Boolean
+}
+
+

@@ -1,0 +1,74 @@
+  
+// query a single member
+
+{
+  getMember(memberId: 262830) {
+    fname
+    dob
+    memberAddress {
+      isActive
+    }
+    visibilityScope {
+      visibilityScopeHash
+    }
+    serviceChannelAccount {
+      channel
+    }
+  }
+}
+
+
+
+
+// query all members [skip is (index) and first is (size)]
+
+{
+  getAllMembers(skip:0,first:10){
+    fname
+  }
+    
+}
+
+
+//query all members with criteria
+
+{
+  getFilteredMembers(filter: {isActive: false}) {
+    fname
+    emailId
+    dob
+  }
+}
+
+{
+  getFilteredMembers(filter: {isActive: false, fname:"Jane"}) {
+    fname
+    emailId
+    dob
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+to be implemented
+ #Members(memberId: [ID!]): [Member!]!
+ 
+  Members(memberId: [52, 53]) {
+    memberId
+    fname
+  }
+  
+  @Query(value = "SELECT m FROM Member m WHERE m.memberId IN :memberIds")
+List<User> findMemberIds(@Param("memberIds") Collection<Long> memberId);
+
+ */

@@ -1,0 +1,17 @@
+type VisibilityScope{
+
+  visibilityScopeId: ID!
+  clientId: Int
+  visibilityScopeHash: String
+  isActive: Boolean
+  createdBy: String
+  createdDate: Date
+  updatedBy: String
+  updatedDate: Date
+  correlationId: String
+
+}
+
+ extend type Query {
+     getVisibilityScopeHashByMemberId(memberId: Int): String
+ }

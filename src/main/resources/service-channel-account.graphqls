@@ -1,0 +1,20 @@
+type ServiceChannelAccount{
+  
+  serviceChAcId: ID!
+  channel: String
+  userId: String
+  credential: String
+  lastAccessValAt: String
+  lastAccessSuccessAt: String
+  lastAuthFailedAt: String
+  offestMinsToNxtLogin: Int
+  isActive: Boolean
+  createdBy: String
+  createdDate: Date
+  updatedBy: String
+  updatedDate: Date
+  accessValidationCode: String
+}
+
+
+  
