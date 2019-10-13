@@ -4,8 +4,8 @@ Graphql implementation for membership-project
 Exposed endpoint at 
 http://localhost:8080/graphiql
 
-Query a single member
-
+## Query a single member
+```
 {
   getMember(memberId: 262830) {
     fname
@@ -21,21 +21,21 @@ Query a single member
     }
   }
 }
+```
 
 
 
-
-Query all members [skip is (index) and first is (size)]
-
+## Query all members [skip is (index) and first is (size)]
+```
 {
   getAllMembers(skip:0,first:10){
     fname
   }
 }
+```
 
-
-Query all members with criteria
-
+## Query all members with criteria
+```
 {
   getFilteredMembers(filter: {isActive: false}) {
     fname
@@ -43,7 +43,8 @@ Query all members with criteria
     dob
   }
 }
-
+```
+```
 {
   getFilteredMembers(filter: {isActive: false, fname:"Jane"}) {
     fname
@@ -51,7 +52,7 @@ Query all members with criteria
     dob
   }
 }
-
+```
 
 
 
